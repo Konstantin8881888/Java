@@ -54,15 +54,13 @@ public class Lesson2
     //------------------------------------------------------------------------
     private static boolean posOrNegReturn(int b)
     {
-        boolean result = false;
+        boolean result = true;
         if (b >= 0)
         {
-            return result;
+            result = false;
         }
-        else
-        {
-            return !result;
-        }
+        return result;
+
     }
     //------------------------------------------------------------------------
     private static void printStrings(int a, String message)
@@ -78,39 +76,35 @@ public class Lesson2
     private static boolean checkYear(String year)
     {
         //Проверим, является ли введённое числом:
+        boolean res = false;
         try
         {
             int yearChecked = Integer.parseInt(year);//Переводим строку в число
 
             if ((yearChecked % 4) == 0)
             {
-                if ((yearChecked % 100 == 0) && (yearChecked % 400 != 0))
+                if ((yearChecked % 100 != 0) || (yearChecked % 400 == 0))
                 {
-                    return false;
-                }
-                else if(yearChecked == 0)
-                {
-                    System.out.println("-й год некорректно называть високосным.");
-                    return false;
-                }
-                else
-                {
-                    return true;
+                    if(yearChecked == 0)
+                    {
+                        System.out.println("-й год некорректно называть високосным.");
+
+                    }
+                    else
+                    {
+                        res = true;
+                    }
                 }
 
             }
 
-            else
-            {
-                return false;
-            }
         }
         catch (NumberFormatException e)//Выбросим исключение, если не удастся сделать блок try, а значит получено не число.
         {
             System.out.println(" - Вы ввели недопустимое значение! " + e);//Можно было бы и не выводить пользователю служебную информацию об ошибке, но пусть будет.
         }
 
-        return false;
+        return res;
     }
 
 }
