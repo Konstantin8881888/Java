@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" cache="true" spacing="20.0" style="-fx-border-radius: 50;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lesson24.HelloController">
+    <TextArea fx:id="textArea" editable="false" VBox.vgrow="ALWAYS" />
+
+    <HBox prefHeight="41.0" prefWidth="478.0">
+        <TextField fx:id="textField" onKeyPressed="#enterPressed" promptText="Input Text!" HBox.hgrow="ALWAYS">
+         <font>
+            <Font name="Consolas" size="12.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <effect>
+            <SepiaTone>
+               <input>
+                  <Lighting bumpInput="$null">
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </input>
+            </SepiaTone>
+         </effect></TextField>
+        <Button fx:id="button" onAction="#sendMessage" text="Send">
+         <font>
+            <Font name="Consolas" size="12.0" />
+         </font></Button>
+    </HBox>
+</VBox>
