@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="302.0" prefWidth="478.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.client_chat.HelloController">
+
+    <HBox fx:id="upperPanel">
+        <TextField fx:id="loginField" promptText="Логин" HBox.hgrow="ALWAYS" />
+        <PasswordField fx:id="passwordField" promptText="Пароль" HBox.hgrow="ALWAYS" />
+        <Button fx:id="enter" onAction="#auth" text="Ok" />
+    </HBox>
+
+    <TextArea fx:id="textArea" editable="false" prefHeight="279.0" prefWidth="478.0" VBox.vgrow="ALWAYS" />
+
+    <HBox fx:id="bottomPanel" managed="false" visible="false">
+
+        <TextField fx:id="textField" alignment="BOTTOM_LEFT" onKeyPressed="#keyListener" prefHeight="28.0" prefWidth="435.0" promptText="Input Message">
+            <font>
+                <Font name="Georgia" size="18.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </TextField>
+        <Button fx:id="button" onAction="#sendMessage" onKeyPressed="#keyListener" prefHeight="35.0" prefWidth="468.0" text="Send">
+            <font>
+                <Font name="MV Boli" size="12.0" />
+            </font>
+        </Button>
+      <effect>
+         <SepiaTone />
+      </effect>
+    </HBox>
+</VBox>
