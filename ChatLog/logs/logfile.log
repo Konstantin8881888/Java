@@ -1,0 +1,7 @@
+INFO  2022-05-31 16:08:36 [main] com.example.server.ServerMain (ServerMain.java:31) - Сервер запущен
+INFO  2022-05-31 16:10:21 [main] com.example.server.ServerMain (ServerMain.java:37) - Клиент подключился
+INFO  2022-05-31 16:10:46 [Thread-0] com.example.server.ServerMain (ServerMain.java:78) - Пользователь 123 вышел.
+INFO  2022-05-31 16:11:13 [main] com.example.server.ServerMain (ServerMain.java:31) - Сервер запущен
+INFO  2022-05-31 16:11:28 [main] com.example.server.ServerMain (ServerMain.java:37) - Клиент подключился
+INFO  2022-05-31 16:11:55 [main] com.example.server.ServerMain (ServerMain.java:37) - Клиент подключился
+INFO  2022-05-31 16:12:19 [Thread-1] com.example.server.ServerMain (ServerMain.java:78) - Пользователь 123 вышел.
