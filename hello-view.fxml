@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="302.0" prefWidth="478.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.client_chat.HelloController">
+    <TextArea fx:id="textArea" editable="false" prefHeight="279.0" prefWidth="478.0" VBox.vgrow="ALWAYS" />
+     <TextField fx:id="textField" alignment="BOTTOM_LEFT" onKeyPressed="#keyListener" prefHeight="28.0" prefWidth="435.0" promptText="Input Text Message...">
+      <font>
+         <Font name="Georgia" size="14.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </TextField>
+     <Button fx:id="button" onAction="#sendMessage" onKeyPressed="#keyListener" prefHeight="35.0" prefWidth="468.0" text="Send">
+      <font>
+         <Font name="MV Boli" size="14.0" />
+      </font>
+   </Button>
+    <HBox>
+      <effect>
+         <SepiaTone />
+      </effect>
+    </HBox>
+</VBox>
